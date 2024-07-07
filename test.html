@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #clicker-img {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+        #score {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clicker Game</h1>
+    <img id="clicker-img" src="hippo_coin.png" alt="Click Me!">
+    <div id="score">Score: 0</div>
+
+    <script>
+        let score = 0;
+
+        document.getElementById('clicker-img').addEventListener('click', function() {
+            score++;
+            document.getElementById('score').innerText = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
